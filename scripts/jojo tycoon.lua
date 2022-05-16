@@ -9,9 +9,9 @@ getgenv().rebirth = true
 player.CanRebirth.Changed:Connect(function()
     if player.CanRebirth.Value == true and rebirth == true then
         game:GetService("ReplicatedStorage")["RebirthEvent (Don't Move)"]:FireServer()
-        wait(5)
+        wait(10)
         firetouchinterest(player.Character.HumanoidRootPart, tycoon.Entrance["Touch to claim!"].Head, 0)
-        firetouchinterest(player.Character.HumanoidRootPart, tycoon.Entrance["Touch to claim!"].Head, 1)
+        firetouchinterest(player.Character.HumanoidRootPart, tycoon.Entrance[player.Name .. "'s Tycoon"].Head, 1)
     end
 end)
 
